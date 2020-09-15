@@ -75,12 +75,12 @@ export default {
         })
         .catch(err => {
           if (err === "Wrong email") {
-            this.errorMessage = "Неверный Email."
+            this.errorMessage = "Неверный Email"
             this.$refs.errorBox.style = "display: block"
             this.$refs.email.style = "outline: #dd2c00 2px solid"
             this.$refs.password.style = "outline: none"
           } else if (err === "Wrong password") {
-            this.errorMessage = "Неверный Пароль."
+            this.errorMessage = "Неверный пароль"
             this.$refs.errorBox.style = "display: block"
             this.$refs.email.style = "outline: none"
             this.$refs.password.style = "outline: #dd2c00 2px solid"
