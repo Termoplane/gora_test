@@ -23,12 +23,10 @@ const actions = {
       // processing backend errors with different status codes
       if (error.status_code === "wrong_login") {
         localStorage.removeItem('token')
-        alert("Неверный email!")
         commit('auth_error')
         return Promise.reject("Wrong email")
       } else if (error.status_code === "wrong_password") {
         localStorage.removeItem('token')
-        alert("Неверный пароль")
         commit('auth_error')
         return Promise.reject("Wrong password")
       }
