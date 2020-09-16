@@ -18,12 +18,12 @@
       <div :class="overlay" @click.prevent="hideMenu"></div>
       <div :class="mobileMenu">
         <img src="../assets/cross.svg" class="toggleHide" @click.prevent="hideMenu" />
-        <router-link to="/" style="color: #000" @click.native="hideMenu">
+        <router-link to="/" class="mobileNavLink" style="color: #000" @click.native="hideMenu">
           <h3 class="mobile__title">
             Главная страница
           </h3>
         </router-link>
-        <router-link to="/user" class="mobile-user" @click.native="hideMenu">
+        <router-link to="/user" class="mobile-user mobileNavLink" @click.native="hideMenu">
           <div class="header__user__data">
             <p> {{ userName }} </p>
             <p>{{ userSurname }}</p>
@@ -150,7 +150,8 @@ export default {
       transition: transform 1000ms ease, backround 1000ms ease
       z-index: 100
       background-color: #F5F5F5
-      gap: 1rem
+      .mobileNavLink
+        padding: 1rem 0 // Mobile Safari doesn't suppotr flexbox gap
       .toggleHide
         align-self: flex-start
         margin: 1rem 0 0 1rem
