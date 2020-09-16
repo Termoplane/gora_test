@@ -8,6 +8,7 @@ import store from "../store";
 
 Vue.use(VueRouter);
 
+// Unauthorized page protection with vue-router navigation guard
 const authRequired = (to, from, next) => {
   if (!store.getters['isAuthenticated']) {
     next('/login')

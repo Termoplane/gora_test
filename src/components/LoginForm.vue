@@ -71,7 +71,7 @@ export default {
       this.$store
         .dispatch('auth_login', { email, password })
         .then(() => {
-          this.$router.push("/");
+          this.$router.push("/"); // Push user to home page if authorization was succesful
         })
         .catch(err => {
           if (err === "Wrong email") {

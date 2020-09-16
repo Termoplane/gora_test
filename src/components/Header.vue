@@ -66,7 +66,7 @@ export default {
     },
     // imgUrl is just a helper function that helps us to make
     // context for an example avatar image and avoid any errors.
-    // It shouldn't be in final result, because we will get an img from backend or cloud.
+    // It shouldn't be in final result, because we should get an img url from backend or cloud.
     imgUrl(path) {
       let images = require.context('../assets/img', false, /\.png$|\.jpg$/)
       return images('./' + path)

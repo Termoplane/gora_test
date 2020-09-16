@@ -16,7 +16,7 @@ const actions = {
   async auth_login({ commit }, user) {
     try {
       commit('auth_pending')
-      const token = await backendPendingSimulation(user.email, user.password) // here should be fetch or axios to a backend. Also we could set some user data to other state module, eg "user" 
+      const token = await backendPendingSimulation(user.email, user.password) // here should be fetch or axios to a backend. Also we could set here some user data to other state modules, eg "user" 
       localStorage.setItem('token', token) // here we use localStorage, but for better security we could use httpOnly Cookies given by server for example and handle auth problems on backend. Depends on project.
       commit('auth_success', token)
     } catch (error) {
