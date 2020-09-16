@@ -3,7 +3,7 @@
     <img src="../assets/bars-light.svg" class="mobile-toggle" @click.prevent="menuTrigger">
     <router-link to="/" style="color: #000">
       <h3 class="header__title">
-        Форум Up9chka
+        Gora Studio
       </h3>
     </router-link>
     <div class="plug" style="flex-grow: 1"></div>
